@@ -1,0 +1,87 @@
+@import "../../../scss/main.scss";
+
+.strategy-section {
+    background-color: var(--theme-light-background-color);
+    padding: 80px 0;
+
+    @media(max-width:768px){
+        padding: 20px 0;
+     }
+ 
+
+    .strategy-heading {
+        padding-bottom: 50px;
+
+        h3 {
+            @include font32;
+            color: var(--theme-black-text-color);
+            margin-bottom: 24px;
+
+            span {
+                color: var(--theme-light-text-color);
+            }
+
+            @media(max-width:576px) {
+                @include font24-bold;
+            }
+        }
+
+        p {
+            @include font16;
+            max-width: 415px;
+            color: var(--theme-light-text-color);
+
+            @media(max-width:576px) {
+                @include font14;
+            }
+        }
+    }
+
+    .strategy-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @media (max-width:768px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width:576px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .strategy-item {
+            background-color: var(--theme-white-background-color);
+            padding: 24px;
+            border: 1px solid var(--theme-card-border-color);
+            border-radius: 10px;
+
+            .strategy-color {
+                width: 40px;
+                height: 40px;
+                background-color: var(--theme-strategy-color);
+                border-radius: 50%;
+                margin-bottom: 20px;
+            }
+
+            h4 {
+                @include font20-medium;
+                margin-bottom: 16px;
+                color: var(--theme-black-text-color);
+
+                @media(max-width:576px) {
+                    @include font16-bold;
+                }
+            }
+
+            p {
+                @include font16;
+                color: var(--theme-light-text-color);
+
+                @media(max-width:576px) {
+                    @include font12;
+                }
+            }
+        }
+    }
+}

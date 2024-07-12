@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1248px;
+  padding: 0 24px;
+  margin: 0 auto;
+}
+
+/* @media(max-width:576px) {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+} */

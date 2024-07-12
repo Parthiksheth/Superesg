@@ -1,0 +1,78 @@
+@import "../../../scss/main.scss";
+
+.hairstyle-section {
+    background-color: var(--theme-light-background-color);
+    padding: 100px 0;
+
+    @media(max-width:768px){
+        padding: 60px 0;
+    }
+
+
+    .hairstyle-grid {
+        display: grid;
+        grid-template-columns: 400px 1fr;
+        gap: 44px;
+        align-items: center;
+
+        @media (max-width:768px){
+            grid-template-columns:  1fr;
+        }
+
+        .hairstyle-item {
+            h3 {
+                @include font32;
+                margin-bottom: 20px;
+                color: var(--theme-black-text-color);
+
+                span {
+                    color: var(--theme-light-text-color);
+                }
+
+                @media(max-width:576px) {
+                    @include font24-bold;
+                }
+            }
+
+            p {
+                @include font16;
+                color: var(--theme-light-text-color);
+
+                @media(max-width:576px) {
+                    @include font14;
+                }
+            }
+
+            .hairstyle-card-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 50px;
+
+                @media (max-width:576px){
+                    grid-template-columns:  1fr;
+                }
+
+                .hairstyle-card-item {
+                    h4 {
+                        @include font24-bold;
+                        margin-bottom: 10px;
+                        color: var(--theme-black-text-color);
+
+                        @media(max-width:576px) {
+                            @include font16-bold;
+                        }
+                    }
+
+                    p {
+                        @include font16;
+                        color: var(--theme-light-text-color);
+
+                        @media(max-width:576px) {
+                            @include font12;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

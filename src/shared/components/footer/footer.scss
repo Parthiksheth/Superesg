@@ -1,0 +1,101 @@
+@import "../../../scss/main.scss";
+
+.footer-section {
+    .footer-main {
+        padding: 80px 0 100px;
+        background-color: var(--themr-footer-background-color);
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 170px 1fr;
+            gap: 80px;
+
+            @media(max-width:768px){
+                grid-template-columns: 1fr;
+            }
+
+            .footer-item-1 {
+
+                @media(max-width:576px){
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    width: 100%;
+                }
+                .footer-logo {
+                    padding-bottom: 40px;
+
+                    img {
+                        height: 29px;
+                    }
+                }
+
+                .footer-social-media-flex {
+                    display: flex;
+                    align-items: center;
+                    gap: 24px;
+
+                    img {
+                        max-width: 100%;
+                    }
+                }
+            }
+
+            .footer-item-2 {
+                .footer-menu-flex {
+                    display: flex;
+                    justify-content: space-between;
+
+                    @media(max-width:576px){
+                        flex-direction: column;
+                        text-align: center;
+                        gap: 80px;
+                    }
+
+                    .footer-menu-item {
+                        h5 {
+                            @include font15;
+                            color: var(--theme-white-text-color);
+                            margin-bottom: 20px;
+                        }
+
+                        a {
+                            @include font14;
+                            color: var(--theme-footer-text-color);
+                            padding-bottom: 16px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-last-line {
+        background-color: var(--theme-footer-background-color-2);
+        padding: 28px 0;
+
+        .footer-last-line-flex {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 70px;
+
+            @media(max-width:768px){
+                justify-content: center;
+            }
+
+            @media(max-width:576px){
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            a{
+                @include font14-medium;
+                color: var(--theme-white-text-color);
+            }
+        }
+    }
+}

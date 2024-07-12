@@ -1,0 +1,60 @@
+@import "../../../scss/main.scss";
+
+.card-section {
+    padding-top: 48px;
+    
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 80px;
+
+        @media(max-width:768px){
+            gap: 40px;
+        }
+
+        @media(max-width:768px){
+            grid-template-columns: 1fr;
+        }
+
+        
+
+        .card-item {
+            display: flex;
+            text-align: center;
+            gap: 20px;
+
+            .card-image {
+                img {
+                    height: 23px;
+
+                    @media(max-width:576px) {
+                        height: 20px;
+                    }
+                }
+
+                @media(max-width:576px) {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+
+            .card-text {
+                p{
+                    max-width: 241px;
+                    @include font18;
+                    color: var(--theme-light-text-color);
+                    text-align: left;
+
+                    @media(max-width:576px) {
+                        @include font16-bold;
+                    }
+
+                    span {
+                        color: var(--theme-black-text-color);
+                    }
+                }
+            }
+        }
+    }
+}

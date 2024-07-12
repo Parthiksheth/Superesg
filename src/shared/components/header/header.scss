@@ -1,0 +1,110 @@
+@import "../../../scss/main.scss";
+
+.header-section {
+    padding: 20px 0;
+
+    .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-item-1 {
+            display: flex;
+            align-items: center;
+
+            .header-logo {
+                img {
+                    object-fit: cover;
+                }
+            }
+
+            .header-menu {
+                display: flex;
+                text-align: center;
+                padding-left: 65px;
+
+                @media (max-width:768px) {
+                    display: none;
+                }
+
+                @media (max-width:1024px) {
+                    display: none;
+                }
+
+                .header-menu-flex {
+                    display: flex;
+                    text-align: center;
+                    gap: 5px;
+
+
+
+                    a {
+                        @include font15;
+                        color: var(--theme-black-text-color);
+                    }
+
+                    .header-image {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            height: 6px;
+                        }
+                    }
+                }
+
+                a {
+                    @include font15;
+                    margin-left: 48px;
+                }
+            }
+        }
+
+        .header-item-2 {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+
+            @media (max-width:768px) {
+                display: none;
+            }
+
+            span {
+                @include font14-medium;
+                color: var(--theme-black-text-color);
+            }
+
+
+            .header-btn {
+                button {
+                    @include font14-medium;
+                    padding: 11px 23px;
+                    border-radius: 99px;
+                    border: 1px solid var(--theme-black-border-color);
+                    background-color: var(--theme-white-background-color);
+                }
+            }
+        }
+
+        .header-mobile-logo {
+            display: none;
+            .header-mobile-logo img {
+                display: none;
+                height: 12px;
+                object-fit: cover;
+            }
+
+            
+            @media (max-width:768px) {
+                display: block;
+            }
+
+            @media (max-width:576px) {
+                display: block;
+            }
+        }
+
+
+    }
+
+}
